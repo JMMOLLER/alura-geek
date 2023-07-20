@@ -1,0 +1,128 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+}
+
+.logo_ecommerce__img {
+    width: 15%;
+    height: auto;
+}
+
+.list_items__ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon.expand {
+    background-image: url("../../assets/icons/expand_less.svg");
+    transform: rotate(180deg);
+}
+
+li:has(.sub_menu__ul) {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+li:has(.sub_menu__ul):hover .expand {
+    cursor: pointer;
+    animation: expand_less 0.3s ease-in-out forwards;
+}
+
+li:has(.sub_menu__ul):hover .sub_menu__ul {
+    display: block;
+}
+
+.expand:not(.expand:hover) {
+    animation: expand_more 0.3s ease-in-out forwards;
+}
+
+.sub_menu__ul {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    padding: 0 10px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    border: 1px solid #000;
+    border-radius: 7px;
+}
+
+li:has(.menu_item__link, .sub_menu_item__link) {
+    margin: 10px 0;
+}
+
+.menu_item__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.user_interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.search_container__div {
+    position: relative;
+}
+.search_user__input {
+    background-color: #c4d1db41;
+    border: 1px solid #bfd0dd;
+    border-radius: 5px;
+    padding: 15px;
+    padding-left: 35px;
+}
+.search_user__input::placeholder {
+    color: #a3adb4;
+}
+.icon.search {
+    position: absolute;
+    left: 5px;
+    bottom: 50%;
+    background-image: url("../../assets/icons/search.svg");
+    transform: translateY(50%);
+}
+
+.icon.user_cart__link {
+    background-image: url("../../assets/icons/cart.svg");
+}
+.icon.user_profile__link {
+    background-image: url("../../assets/icons/user.svg");
+}
+
+@keyframes expand_less {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes expand_more {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}

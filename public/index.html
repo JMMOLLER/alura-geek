@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layouts/hearder.css">
     <title>Inicio - AluraGeek</title>
 </head>
 <body>
 
-    <!-- Todo el contenido de la página aquí -->
+    <header>
+        <img src="./assets/icons/logo.svg" alt="logo" class="logo_ecommerce__img">
+        <nav>
+            <ul class="list_items__ul">
+                <li>
+                    <a href="#" class="menu_item__link">Shop</a>
+                    <span class="icon expand"></span>
+                    <ul class="sub_menu__ul">
+                        <li><a href="#" class="sub_menu_item__link">First Brand</a></li>
+                        <li><a href="#" class="sub_menu_item__link">Second Brand</a></li>
+                        <li><a href="#" class="sub_menu_item__link">Third Brand</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="menu_item__link">Most Wanted</a></li>
+                <li><a href="#" class="menu_item__link">New arrival</a></li>
+                <li><a href="#" class="menu_item__link">Brands</a></li>
+            </ul>
+        </nav>
+        <div class="user_interaction">
+            <div class="search_container__div">
+                <input type="text" name="search_input" id="search_input" class="search_user__input" placeholder="Search">
+                <span class="icon search"></span>
+            </div>
+            <a href="#" class="icon user_cart__link" aria-label="Carrito de compras"></a>
+            <a href="#" class="icon user_profile__link" aria-label="Perfil de usuario"></a>
+        </div>
+    </header>
 
     <script src="./js/index.js" type="module"></script>
 </body>
